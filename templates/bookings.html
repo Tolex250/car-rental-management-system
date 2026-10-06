@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<div class="section-title"><div><p class="eyebrow">RENTAL RECORDS</p><h1>Bookings</h1></div>{% if can_request %}<a class="button" href="/bookings/new/">New request</a>{% endif %}</div>{% include 'booking_table.html' %}{% endblock %}

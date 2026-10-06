@@ -1,0 +1,74 @@
+Creating test database for alias 'default' ('[workspace]\outputs\car-rental-system\test.sqlite3')...
+
+Destroying old test database for alias 'default' ('[workspace]\outputs\car-rental-system\test.sqlite3')...
+
+Found 37 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: auth, contenttypes, rental, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying rental.0001_initial... OK
+  Applying rental.0002_integrity_triggers... OK
+test_T01_invalid_interval (rental.tests.WorkflowTests.test_T01_invalid_interval) ... ok
+test_T02_overlap_rejected (rental.tests.WorkflowTests.test_T02_overlap_rejected) ... ok
+test_T03_adjacent_allowed (rental.tests.WorkflowTests.test_T03_adjacent_allowed) ... ok
+test_T04_turnaround_blocks (rental.tests.WorkflowTests.test_T04_turnaround_blocks) ... ok
+test_T06_maintenance_blocks (rental.tests.WorkflowTests.test_T06_maintenance_blocks) ... ok
+test_T07_requester_cannot_verify_payment (rental.tests.WorkflowTests.test_T07_requester_cannot_verify_payment) ... ok
+test_T08_ownership_is_checked_on_server (rental.tests.WorkflowTests.test_T08_ownership_is_checked_on_server) ... ok
+test_T09_duplicate_payment_reference (rental.tests.WorkflowTests.test_T09_duplicate_payment_reference) ... ok
+test_T10_49_hours_is_three_days (rental.tests.WorkflowTests.test_T10_49_hours_is_three_days) ... ok
+test_T11_extension_conflict (rental.tests.WorkflowTests.test_T11_extension_conflict) ... ok
+test_admin_has_no_implicit_fleet_authority (rental.tests.WorkflowTests.test_admin_has_no_implicit_fleet_authority) ... ok
+test_allocation_owner_constraint (rental.tests.WorkflowTests.test_allocation_owner_constraint) ... ok
+test_audit_is_append_only (rental.tests.WorkflowTests.test_audit_is_append_only) ... ok
+test_cancel_retains_payment_and_credit (rental.tests.WorkflowTests.test_cancel_retains_payment_and_credit) ... ok
+test_cannot_clear_issued_vehicle (rental.tests.WorkflowTests.test_cannot_clear_issued_vehicle) ... ok
+test_csrf_protects_actions (rental.tests.WorkflowTests.test_csrf_protects_actions) ... ok
+test_database_trigger_rejects_direct_overlap (rental.tests.WorkflowTests.test_database_trigger_rejects_direct_overlap) ... ok
+test_database_update_overlap_rejected (rental.tests.WorkflowTests.test_database_update_overlap_rejected) ... ok
+test_decreasing_mileage_rejected (rental.tests.WorkflowTests.test_decreasing_mileage_rejected) ... ok
+test_deposit_and_refund_reconcile (rental.tests.WorkflowTests.test_deposit_and_refund_reconcile) ... ok
+test_disabled_user_cannot_request (rental.tests.WorkflowTests.test_disabled_user_cannot_request) ... ok
+test_expired_maintenance_requires_release_for_issue (rental.tests.WorkflowTests.test_expired_maintenance_requires_release_for_issue) ... ok
+test_get_action_does_not_mutate (rental.tests.WorkflowTests.test_get_action_does_not_mutate) ... ok
+test_issue_requires_payment (rental.tests.WorkflowTests.test_issue_requires_payment) ... ok
+test_late_return_blocks_next_issue_until_clearance (rental.tests.WorkflowTests.test_late_return_blocks_next_issue_until_clearance) ... ok
+test_login_throttle (rental.tests.WorkflowTests.test_login_throttle) ... ok
+test_money_rejects_nan_negative_and_subcent (rental.tests.WorkflowTests.test_money_rejects_nan_negative_and_subcent) ... ok
+test_over_refund_rejected (rental.tests.WorkflowTests.test_over_refund_rejected) ... ok
+test_pages_render_by_role (rental.tests.WorkflowTests.test_pages_render_by_role) ... ok
+test_registration_creates_only_requester (rental.tests.WorkflowTests.test_registration_creates_only_requester) ... ok
+test_reports_reconcile (rental.tests.WorkflowTests.test_reports_reconcile) ... ok
+test_request_content_is_escaped (rental.tests.WorkflowTests.test_request_content_is_escaped) ... ok
+test_saved_tariff_survives_vehicle_rate_change (rental.tests.WorkflowTests.test_saved_tariff_survives_vehicle_rate_change) ... ok
+test_substitution_retains_history_and_tariff (rental.tests.WorkflowTests.test_substitution_retains_history_and_tariff) ... ok
+test_unserviceable_vehicle_not_searchable (rental.tests.WorkflowTests.test_unserviceable_vehicle_not_searchable) ... ok
+test_T05_two_concurrent_confirmations (rental.tests.DatabaseTests.test_T05_two_concurrent_confirmations) ... ok
+test_T12_backup_restore_reconciliation (rental.tests.DatabaseTests.test_T12_backup_restore_reconciliation) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 5.414s
+
+OK
+Destroying test database for alias 'default' ('[workspace]\outputs\car-rental-system\test.sqlite3')...
+
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
