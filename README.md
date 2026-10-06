@@ -12,7 +12,7 @@ A working academic prototype for a University of Ibadan case-study context. This
 - Issue and return inspections, mileage/fuel validation and late-return clearance.
 - Rental reconciliation reports with inclusive booking-creation date filters and CSV export.
 - Account activation and role changes with reasons, plus an application audit trail.
-- SQLite backup command, automated regression tests and a GitHub Actions workflow.
+- SQLite backup command, automated regression tests and an optional GitHub Actions workflow template.
 
 ## Requirements
 
@@ -56,7 +56,7 @@ For a short live demonstration, choose collection a few minutes ahead and return
 .venv/Scripts/python.exe manage.py test rental --noinput -v 2
 ```
 
-The suite includes genuine concurrent confirmations on separate database connections, direct database constraint checks, unauthorised access, CSRF, escaped user content, deposit reconciliation, refunds, late-return handling and backup restoration. Test-only MD5 hashing keeps fixtures fast; the application uses Django's normal password hashing. See `docs/test-results.txt` and `docs/VALIDATION.md` for recorded local evidence. GitHub Actions has not passed until a remote run actually completes.
+The suite includes genuine concurrent confirmations on separate database connections, direct database constraint checks, unauthorised access, CSRF, escaped user content, deposit reconciliation, refunds, late-return handling and backup restoration. Test-only MD5 hashing keeps fixtures fast; the application uses Django's normal password hashing. See `docs/test-results.txt` and `docs/VALIDATION.md` for recorded local evidence. The optional `docs/github-actions.yml` template can be placed in `.github/workflows/tests.yml` to enable CI. No remote CI run is claimed.
 
 ## Architecture and scheduling
 
